@@ -1,0 +1,108 @@
+.game-board {
+    /* background: url(./assets/bg-triangle.svg);
+    background-repeat: no-repeat;
+    background-size: 18.75rem;
+    background-position: center; */
+    position: relative;
+}
+
+.game-board__background__image {
+    width: 100%;
+    height: 100%;
+}
+
+.game-board__paper:hover, 
+.game-board__scissors:hover, 
+.game-board__rock:hover {
+    cursor: pointer;
+}
+
+.game-board__paper, 
+.game-board__scissors, 
+.game-board__rock {
+    border-radius: 50%;
+    /* border-radius: 50%;
+    border: 16px solid; */
+    position: absolute;
+}
+
+.game-board__paper {
+    background: var(--clr-2);
+    top: 0;
+    left: 0;
+}
+
+.game-board__rock {
+    background: var(--clr-3);
+    bottom: 94px;
+    /* left: 97px; */
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.game-board__scissors {
+    background: var(--clr-1);
+    top: 0;
+    right: 0;
+}
+
+.game-board__paper div, 
+.game-board__scissors div, 
+.game-board__rock div {
+    background: white;
+    border-radius: 50%;
+}
+  
+
+@media screen and (min-width: 375px) {
+    .game-board {
+        height: 24rem;
+        padding: 3rem;
+    }
+
+    .game-board__background {
+        height: 13rem;
+    }
+
+    /* .game-board__background {
+    width: 200px;
+    height: 200px;
+    } */
+
+    .game-board__paper, 
+    .game-board__scissors, 
+    .game-board__rock {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    .game-board__paper {
+        box-shadow: inset 0px -5px 1px hsl(229, 63%, 47%);
+    }
+
+    .game-board__scissors {
+        box-shadow: inset 0px -5px hsl(29, 80%, 44%);
+    }
+
+    .game-board__rock {
+        box-shadow: inset 0px -5px hsl(348, 75%, 36%);
+    }
+
+    .game-board__paper div, 
+    .game-board__scissors div, 
+    .game-board__rock div {
+        width: 6rem;
+        height: 6rem;
+        box-shadow: inset 0px 5px hsl(222, 20%, 77%);
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+    
+}
+
+@media screen and (min-width: 1440px) {
+    
+}
+

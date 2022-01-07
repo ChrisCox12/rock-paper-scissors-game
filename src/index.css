@@ -1,4 +1,21 @@
-body {
+:root {
+  --clr-1: linear-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  --clr-2: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  --clr-3: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  --clr-4: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  --clr-5: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+  --txt-clr-1: hsl(229, 25%, 31%);
+  --txt-clr-2: hsl(229, 64%, 46%);
+  --txt-clr-3: hsl(217, 16%, 45%);
+
+  --clr-background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+
+  --ft-wt-1: 600;
+  --ft-wt-2: 700;
+}
+
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +27,12 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Barlow Semi Condensed', sans-serif;
 }

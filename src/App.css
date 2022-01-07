@@ -1,38 +1,210 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background: var(--clr-background);
   min-height: 100vh;
+  position: relative;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.justify-center {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.align-center {
+  align-items: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+header {
+  padding: 1rem;
+  border: 3px solid var(--txt-clr-3);
+  border-radius: 5px;
+  margin: auto;
+}
+
+.score-counter {
+  background: white;
+  /* padding: 1rem; */
+  border-radius: 5px;
+
+}
+
+.score-counter p:first-child {
+  color: var(--txt-clr-2);
+  font-weight: var(--ft-wt-1);
+}
+
+.score-counter__score {
+  color: var(--txt-clr-1);
+  font-weight: var(--ft-wt-2);
+}
+
+.rules-button {
+  border: 2px solid var(--txt-clr-3);
+  border-radius: 10px;
+  /* text-align: center; */
+  font-size: 1.125rem;
   color: white;
+  letter-spacing: 0.125rem;
+  padding: 0.75rem 2.5rem;
+  background: transparent;
 }
 
-.App-link {
-  color: #61dafb;
+.rules-button:hover {
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  z-index: 100;
+  display: none;
+}
+
+.rules-sheet {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  display: none;
+
+}
+
+.rules-sheet p {
+  font-size: 2rem;
+  font-weight: var(--ft-wt-2);
+  color: hsl(214, 47%, 23%);
+}
+
+.rules-sheet__close-button {
+  border: none;
+  background: transparent;
+}
+
+.rules-sheet__close-button:hover {
+  cursor: pointer;
+}
+
+.rules-sheet__sheet {
+  margin-top: 2rem;
+}
+
+.rules-sheet__sheet img {
+  width: 100%;
+}
+
+.show {
+  display: block;
+}
+
+.show-overlay {
+  display: flex;
+}
+
+
+@media screen and (min-width: 375px) {
+  .App {
+    padding: 2rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  header {
+    height: 7.25rem;
+    margin-bottom: 6rem;
+  }
+
+  .logo {
+    width: 5.5rem;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .score-counter {
+    width: 5rem;
+    height: 100%;
+    /* padding: 0.5rem; */
+    /* padding-top: 0.75rem;
+    padding-bottom: 0.75rem; */
+  }
+
+  .score-counter p:first-child {
+    font-size: 0.8rem;
+  }
+
+  .score-counter__score {
+    font-size: 2.25rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .App {
+    padding-top: 3rem;
+  }
+
+  header {
+    width: 75%;
+    height: 8.25rem;
+  }
+
+  .logo {
+    width: 7rem;
+  }
+
+  .score-counter {
+    width: 6.5rem;
+  }
+
+  .score-counter p:first-child {
+    font-size: 1rem;
+  }
+
+  .score-counter__score {
+    font-size: 2.75rem;
+  }  
+}
+
+@media screen and (min-width: 1440px) {
+  .App {
+    padding-top: 4rem;
+  }
+
+  header {
+    width: 60%;
+    height: 10rem;
+    padding: 1.5rem;
+    padding-left: 2rem;
+    border-radius: 15px;
+  }
+
+  .logo {
+    width: 10rem;
+  }
+
+  .score-counter {
+    border-radius: 10px;
+    width: 9.5rem;
+    /* padding: 1.5rem; */
+  }
+
+  .score-counter p:first-child {
+    font-size: 1.125rem;
+  }
+
+  .score-counter__score {
+    font-size: 4rem;
   }
 }
