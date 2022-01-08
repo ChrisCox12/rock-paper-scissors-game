@@ -77,6 +77,8 @@ function GameBoard({ setPicked, setUserPick, setComputerPick, score, setScore, s
         
         break;
     }
+
+    localStorage.setItem('score', x);
   }
 
 

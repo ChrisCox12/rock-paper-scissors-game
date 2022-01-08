@@ -7,14 +7,22 @@ import GameBoard from './components/GameBoard/GameBoard';
 import WinLoss from './components/WinLoss/WinLoss';
 
 function App() {
-  const [didWin, setDidWin] = useState(null);
   const [score, setScore] = useState(0);
   const [picked, setPicked] = useState(false);
   const [userPick, setUserPick] = useState('');
   const [computerPick, setComputerPick] = useState('');
-  const [playAgain, setPlayAgain] = useState(false);
   const [showRules, setShowRules] = useState(false);
   const [result, setResult] = useState('');
+
+
+  useEffect(() => {
+    const scoreToRead = getScore();
+
+    if(scoreToRead !== null) {
+      /* console.log(parseInt( scoreToRead )); */
+      setScore( parseInt(scoreToRead) );
+    }
+  }, []);
 
   useEffect(() => {
     const rules = document.querySelector('.rules-sheet');
@@ -28,8 +36,14 @@ function App() {
       rules.classList.remove('show');
       overlay.classList.remove('show-overlay');
     }
-  }, [showRules])
+  }, [showRules]);
 
+
+  function getScore() {
+    return localStorage.getItem('score');
+  }
+
+  
   return (
     <div className="App">
       <header className='flex justify-space-between align-center'>

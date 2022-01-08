@@ -1,0 +1,109 @@
+.results-screen__win-loss-draw {
+    font-weight: var(--ft-wt-2);
+    color: white;
+    font-size: 4.25rem;
+    margin-bottom: 1rem;
+}
+
+.results-screen__play-again-button {
+    padding: 1rem 5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    color: var(--txt-clr-1);
+    margin-bottom: 3rem;
+}
+
+.results-screen__picks__user__paper, 
+.results-screen__picks__user__scissors,
+.results-screen__picks__user__rock,
+.results-screen__picks__computer__scissors,
+.results-screen__picks__computer__paper,
+.results-screen__picks__computer__rock {
+    border-radius: 50%;
+}
+
+.results-screen__picks__user__paper div, 
+.results-screen__picks__user__scissors div,
+.results-screen__picks__user__rock div,
+.results-screen__picks__computer__scissors div,
+.results-screen__picks__computer__paper div,
+.results-screen__picks__computer__rock div {
+    background: white;
+    border-radius: 50%;
+}
+
+.results-screen__picks__user__paper, 
+.results-screen__picks__computer__paper {
+    background: var(--clr-2);
+}
+
+.results-screen__picks__user__scissors,
+.results-screen__picks__computer__scissors {
+    background: var(--clr-1);
+}
+
+.results-screen__picks__user__rock,
+.results-screen__picks__computer__rock {
+    background: var(--clr-3);
+}
+
+.results-screen__picks__user p,
+.results-screen__picks__computer p {
+    color: white;
+    letter-spacing: 0.125rem;
+}
+
+
+@media screen and (min-width: 375px) {
+    .results-screen__picks {
+        margin-bottom: 6rem;
+    }
+
+    .results-screen__picks__user__paper, 
+    .results-screen__picks__user__scissors,
+    .results-screen__picks__user__rock,
+    .results-screen__picks__computer__scissors,
+    .results-screen__picks__computer__paper,
+    .results-screen__picks__computer__rock {
+        width: 8rem;
+        height: 8rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .results-screen__picks__user__paper, 
+    .results-screen__picks__computer__paper {
+        box-shadow: inset 0px -5px 1px hsl(229, 63%, 47%);
+    }
+
+    .results-screen__picks__user__scissors,
+    .results-screen__picks__computer__scissors {
+        box-shadow: inset 0px -5px hsl(29, 80%, 44%);
+    }
+
+    .results-screen__picks__user__rock,
+    .results-screen__picks__computer__rock {
+        box-shadow: inset 0px -5px hsl(348, 75%, 36%);
+    }
+
+    .results-screen__picks__user__paper div, 
+    .results-screen__picks__user__scissors div,
+    .results-screen__picks__user__rock div,
+    .results-screen__picks__computer__scissors div,
+    .results-screen__picks__computer__paper div,
+    .results-screen__picks__computer__rock div {
+        width: 6rem;
+        height: 6rem;
+        box-shadow: inset 0px 5px hsl(222, 20%, 77%);
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .results-screen__picks__user, 
+    .results-screen__picks__computer {
+        flex-direction: column-reverse;
+    }
+}
+
+

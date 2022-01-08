@@ -1,41 +1,98 @@
 import React, { useEffect, useState } from 'react';
+import './WinLoss.css';
+import paper from '../../assets/icon-paper.svg';
+import rock from '../../assets/icon-rock.svg';
+import scissors from '../../assets/icon-scissors.svg';
 
 function WinLoss({ userPick, setPicked, computerPick, result }) {
     const [win, setWin] = useState(false);
     const [draw, setDraw] = useState(false);
     const [loss, setLoss] = useState(false);
 
+    
     useEffect(() => {
-        if(result === 'win') {
-            setWin(true);
-        }
-        else if(result === 'loss') {
-            setLoss(true);
-        }
-        else {
-            setDraw(true);
+        switch(result) {
+            case 'win':
+                setWin(true);
+                break;
+            case 'loss':
+                setLoss(true);
+                break;
+            case 'draw':
+                setDraw(true);
+                break;
+            default:
+                break;
         }
     }, [result])
     
 
     return (
-        <div>
-            <p>Win / Loss</p>
-            <p>You selected {userPick}</p>
-            <p>The computer selected {computerPick}</p>
+        <div className='results-screen'>
+            <div className='results-screen__picks flex align-center justify-space-between'>
+                <div className='results-screen__picks__user flex flex-column align-center justify-center'>
+                    {userPick === 'paper' &&
+                        <div className='results-screen__picks__user__paper flex justify-center align-center'>
+                            <div className='flex justify-center align-center'>
+                                <img src={paper} alt='paper' />
+                            </div>
+                        </div>
+                    }
+                    {userPick === 'scissors' &&
+                        <div className='results-screen__picks__user__scissors flex justify-center align-center'>
+                            <div className='flex justify-center align-center'>
+                                <img src={scissors} alt='scissors' />
+                            </div>
+                        </div>
+                    }
+                    {userPick === 'rock' &&
+                        <div className='results-screen__picks__user__rock flex justify-center align-center'>
+                            <div className='flex justify-center align-center'>
+                                <img src={rock} alt='rock' />
+                            </div>
+                        </div>
+                    }
+                    <p>YOU PICKED</p>
+                </div>
+
+                <div className='results-screen__picks__computer flex flex-column justify-center align-center'>
+                    {computerPick === 'paper' &&
+                        <div className='results-screen__picks__computer__paper flex justify-center align-center'>
+                            <div className='flex justify-center align-center'>
+                                <img src={paper} alt='paper' />
+                            </div>
+                        </div>
+                    }
+                    {computerPick === 'scissors' &&
+                        <div className='results-screen__picks__computer__scissors flex justify-center align-center'>
+                            <div className='flex justify-center align-center'>
+                                <img src={scissors} alt='scissors' />
+                            </div>
+                        </div>
+                    }
+                    {computerPick === 'rock' &&
+                        <div className='results-screen__picks__computer__rock flex justify-center align-center'>
+                            <div className='flex justify-center align-center'>
+                                <img src={rock} alt='rock' />
+                            </div>
+                        </div>
+                    }
+                    <p>THE HOUSE PICKED</p>
+                </div>
+            </div>
             {win && 
-                <p>Winner</p>
+                <p className='results-screen__win-loss-draw'>YOU WIN</p>
             }
             
             {loss && 
-                <p>Loser</p>
+                <p className='results-screen__win-loss-draw'>YOU LOSE</p>
             }
 
             {draw && 
-                <p>Tie</p>
-            }  
-            {/* <button onClick={incScore}>{currentScore}</button> */}          
-            <button onClick={() => setPicked(false)}>Click me</button>
+                <p className='results-screen__win-loss-draw'>TIE</p>
+            }
+
+            <button className='results-screen__play-again-button' onClick={() => setPicked(false)}>PLAY AGAIN</button>
         </div>
     )
 }
