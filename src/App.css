@@ -150,6 +150,12 @@ header {
   }
 }
 
+@media screen and (min-width:540px) {
+  header{
+    width: 90%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .App {
     padding-top: 3rem;
@@ -177,13 +183,19 @@ header {
   }  
 }
 
+@media screen and (min-width: 1024px) {
+  header {
+    width: 60%;
+  }
+}
+
 @media screen and (min-width: 1440px) {
   .App {
     padding-top: 4rem;
   }
 
   header {
-    width: 60%;
+    width: 50%;
     height: 10rem;
     padding: 1.5rem;
     padding-left: 2rem;

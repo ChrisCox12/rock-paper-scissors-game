@@ -90,19 +90,19 @@ function GameBoard({ setPicked, setUserPick, setComputerPick, score, setScore, s
 
       <div className='game-board__paper flex justify-center align-center' onClick={() => shoot('paper')}>
         <div className='flex justify-center align-center'>
-          <img src={paper} alt='paper' />
+          <img className='rps-icon' src={paper} alt='paper' />
         </div>
       </div>
       
       <div className='game-board__scissors flex justify-center align-center' onClick={() => shoot('scissors')}>
         <div className='flex justify-center align-center'>
-          <img src={scissors} alt='scissors' />
+          <img className='rps-icon' src={scissors} alt='scissors' />
         </div>
       </div>
       
       <div className='game-board__rock flex justify-center align-center' onClick={() => shoot('rock')}>
         <div className='flex justify-center align-center'>
-          <img src={rock} alt='rock' />
+          <img className='rps-icon' src={rock} alt='rock' />
         </div>
       </div>
     </section>
