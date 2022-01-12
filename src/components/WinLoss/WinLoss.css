@@ -15,6 +15,11 @@
     margin-bottom: 3rem;
 }
 
+.results-screen__play-again-button:hover {
+    cursor: pointer;
+    color: red;
+}
+
 .results-screen__picks__user__paper, 
 .results-screen__picks__user__scissors,
 .results-screen__picks__user__rock,
@@ -55,8 +60,24 @@
     letter-spacing: 0.125rem;
 }
 
+.bst {
+    box-shadow: inset 0px -5px hsl(348, 75%, 36%), 0 0 0 40px green, 0 0 0 60px blueviolet;
+}
+
+.winner {
+    
+}
+
+.noshow {
+    display: none;
+}
+
 
 @media screen and (min-width: 375px) {
+    .results-screen__picks {
+        justify-content: space-between;
+    }
+
     .results-screen__picks {
         margin-bottom: 6rem;
     }
@@ -99,10 +120,120 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 540px) {
+    .results-screen__picks__user__paper, 
+    .results-screen__picks__user__scissors,
+    .results-screen__picks__user__rock,
+    .results-screen__picks__computer__scissors,
+    .results-screen__picks__computer__paper,
+    .results-screen__picks__computer__rock {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .results-screen__picks__user__paper div, 
+    .results-screen__picks__user__scissors div,
+    .results-screen__picks__user__rock div,
+    .results-screen__picks__computer__scissors div,
+    .results-screen__picks__computer__paper div,
+    .results-screen__picks__computer__rock div {
+        width: 8rem;
+        height: 8rem; 
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .results-screen__picks__user__paper, 
+    .results-screen__picks__user__scissors,
+    .results-screen__picks__user__rock,
+    .results-screen__picks__computer__scissors,
+    .results-screen__picks__computer__paper,
+    .results-screen__picks__computer__rock {
+        width: 12rem;
+        height: 12rem;
+    }
+
+    .results-screen__picks__user__paper div, 
+    .results-screen__picks__user__scissors div,
+    .results-screen__picks__user__rock div,
+    .results-screen__picks__computer__scissors div,
+    .results-screen__picks__computer__paper div,
+    .results-screen__picks__computer__rock div {
+        width: 10rem;
+        height: 10rem; 
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .results-screen__picks {
+        justify-content: space-around;
+    }
+
     .results-screen__picks__user, 
     .results-screen__picks__computer {
         flex-direction: column-reverse;
+    }
+
+    .results-screen__picks__user__paper, 
+    .results-screen__picks__user__scissors,
+    .results-screen__picks__user__rock,
+    .results-screen__picks__computer__scissors,
+    .results-screen__picks__computer__paper,
+    .results-screen__picks__computer__rock {
+        width: 14rem;
+        height: 14rem;
+    }
+
+    .results-screen__picks__user__paper div, 
+    .results-screen__picks__user__scissors div,
+    .results-screen__picks__user__rock div,
+    .results-screen__picks__computer__scissors div,
+    .results-screen__picks__computer__paper div,
+    .results-screen__picks__computer__rock div {
+        width: 10rem;
+        height: 10rem; 
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .results-screen__picks__user__paper, 
+    .results-screen__picks__user__scissors,
+    .results-screen__picks__user__rock,
+    .results-screen__picks__computer__scissors,
+    .results-screen__picks__computer__paper,
+    .results-screen__picks__computer__rock {
+        width: 18rem;
+        height: 18rem;
+        z-index: 2;
+    }
+
+    .results-screen__picks__user__paper div, 
+    .results-screen__picks__user__scissors div,
+    .results-screen__picks__user__rock div,
+    .results-screen__picks__computer__scissors div,
+    .results-screen__picks__computer__paper div,
+    .results-screen__picks__computer__rock div {
+        width: 14rem;
+        height: 14rem; 
+    }
+
+    .results-screen__rapa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 2;
+    }
+
+    .user_picks-backg, 
+    .computer_picks-backg {
+        min-width: 18rem;
+        min-height: 18rem;
+        position: absolute;
+        background-color: yellow;
+        z-index: 1;
+        border-radius: 50%;
+        box-shadow: 0 0 0 60px hsl(223, 34%, 26%), 0 0 0 100px hsl(220, 38%, 24%), 0 0 0 180px hsl(218, 41%, 23%);
     }
 }
 
