@@ -182,6 +182,7 @@
     .results-screen__picks__computer__rock {
         width: 14rem;
         height: 14rem;
+        z-index: 2;
     }
 
     .results-screen__picks__user__paper div, 
@@ -192,6 +193,28 @@
     .results-screen__picks__computer__rock div {
         width: 10rem;
         height: 10rem; 
+    }
+
+    .results-screen__rapa {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-70%);
+        z-index: 2;
+    }
+
+    .user_picks-backg, 
+    .computer_picks-backg {
+        min-width: 13rem;
+        min-height: 13rem;
+        position: absolute;
+        background-color: yellow;
+        z-index: 1;
+        border-radius: 50%;
+        box-shadow: 
+            0 0 0 60px hsl(223, 34%, 26%), 
+            0 0 0 100px hsl(220, 38%, 24%), 
+            0 0 0 180px hsl(218, 41%, 23%);
     }
 }
 
@@ -227,13 +250,16 @@
 
     .user_picks-backg, 
     .computer_picks-backg {
-        min-width: 18rem;
-        min-height: 18rem;
+        min-width: 17rem;
+        min-height: 17rem;
         position: absolute;
         background-color: yellow;
         z-index: 1;
         border-radius: 50%;
-        box-shadow: 0 0 0 60px hsl(223, 34%, 26%), 0 0 0 100px hsl(220, 38%, 24%), 0 0 0 180px hsl(218, 41%, 23%);
+        box-shadow: 
+            0 0 0 60px hsl(223, 34%, 26%), 
+            0 0 0 100px hsl(220, 38%, 24%), 
+            0 0 0 180px hsl(218, 41%, 23%);
     }
 }
 
