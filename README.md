@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Rock, Paper, Scissors](https://your-live-site-url.com)
+- Live Site URL: [Rock, Paper, Scissors](https://simple-rps-proj.netlify.app/)
 
 
 ## My process
