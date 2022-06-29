@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import GameBoard from './components/GameBoard/GameBoard';
 import WinLoss from './components/WinLoss/WinLoss';
 
+
 function App() {
   const [score, setScore] = useState(0);
   const [picked, setPicked] = useState(false);
@@ -16,10 +17,9 @@ function App() {
 
 
   useEffect(() => {
-    const scoreToRead = getScore();
+    const scoreToRead = localStorage.getItem('rps-score');
 
     if(scoreToRead !== null) {
-      /* console.log(parseInt( scoreToRead )); */
       setScore( parseInt(scoreToRead) );
     }
   }, []);
@@ -37,11 +37,6 @@ function App() {
       overlay.classList.remove('show-overlay');
     }
   }, [showRules]);
-
-
-  function getScore() {
-    return localStorage.getItem('score');
-  }
 
   
   return (
@@ -75,19 +70,25 @@ function App() {
 
       <button className='rules-button' onClick={() => setShowRules(!showRules)}>RULES</button>
 
-      <section className='overlay flex justify-center align-center'>
-        <section className='rules-sheet'>
+      <div className='overlay flex justify-center align-center'>
+        <div className='rules-sheet'>
           <div className='flex justify-space-between align-center'>
             <p>RULES</p>
             <button className='rules-sheet__close-button' onClick={() => setShowRules(!showRules)}>
               <img src={close} alt='Close' />
             </button>
           </div>
+
           <div className='rules-sheet__sheet'>
             <img src={rules} alt='Rock, Paper, Scissors Rules' />
           </div>
-        </section>
-      </section>
+        </div>
+      </div>
+
+      <footer className='attribution' style={{ color: 'white', textAlign: 'center', marginTop: '1.5rem' }}>
+          Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank' rel='noreferrer'>Frontend Mentor</a>. 
+          Coded by <a href='https://chriscox12.github.io/' target='_blank' rel='noreferrer'>Christopher Cox</a>.
+      </footer>
     </div>
   );
 }

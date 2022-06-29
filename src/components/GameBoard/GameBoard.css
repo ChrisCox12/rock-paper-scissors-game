@@ -1,8 +1,4 @@
 .game-board {
-    /* background: url(./assets/bg-triangle.svg);
-    background-repeat: no-repeat;
-    background-size: 18.75rem;
-    background-position: center; */
     position: relative;
 }
 
@@ -21,8 +17,6 @@
 .game-board__scissors, 
 .game-board__rock {
     border-radius: 50%;
-    /* border-radius: 50%;
-    border: 16px solid; */
     position: absolute;
 }
 
@@ -34,11 +28,6 @@
 
 .game-board__rock {
     background: var(--clr-3);
-    /* bottom: 94px; */
-    /* left: 97px; */
-    /* left: 50%;
-    bottom: 0;
-    transform: translateX(-50%) translateY(-40%); */
 }
 
 .game-board__scissors {
@@ -61,7 +50,7 @@
 }
   
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 0px) {
     .game-board {
         height: 24rem;
         padding: 3rem;
@@ -105,10 +94,6 @@
 }
 
 @media screen and (min-width: 540px) {
-    /* header {
-        width: 90%;
-    } */
-
     .game-board__paper, 
     .game-board__scissors, 
     .game-board__rock {

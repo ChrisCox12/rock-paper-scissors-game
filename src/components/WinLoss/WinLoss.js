@@ -4,26 +4,28 @@ import paper from '../../assets/icon-paper.svg';
 import rock from '../../assets/icon-rock.svg';
 import scissors from '../../assets/icon-scissors.svg';
 
-function WinLoss({ userPick, setPicked, computerPick, result }) {
+
+export default function WinLoss({ userPick, setPicked, computerPick, result }) {
     const [win, setWin] = useState(false);
     const [draw, setDraw] = useState(false);
     const [loss, setLoss] = useState(false);
     
+
     useEffect(() => {
-        let uP = null;
-        let cP = null;
+        let userP = null;
+        let computerP = null;
         const userPicksBackg = document.querySelector('.user_picks-backg');
         const computerPicksBackg = document.querySelector('.computer_picks-backg');
 
         switch(userPick) {
             case 'paper':
-                uP = document.querySelector('.results-screen__picks__user__paper');
+                userP = document.querySelector('.results-screen__picks__user__paper');
                 break;
             case 'scissors':
-                uP = document.querySelector('.results-screen__picks__user__scissors');
+                userP = document.querySelector('.results-screen__picks__user__scissors');
                 break;
             case 'rock':
-                uP = document.querySelector('.results-screen__picks__user__rock');
+                userP = document.querySelector('.results-screen__picks__user__rock');
                 break;
             default:
                 break;
@@ -31,13 +33,13 @@ function WinLoss({ userPick, setPicked, computerPick, result }) {
 
         switch(computerPick) {
             case 'paper':
-                cP = document.querySelector('.results-screen__picks__computer__paper');
+                computerP = document.querySelector('.results-screen__picks__computer__paper');
                 break;
             case 'scissors':
-                cP = document.querySelector('.results-screen__picks__computer__scissors');
+                computerP = document.querySelector('.results-screen__picks__computer__scissors');
                 break;
             case 'rock':
-                cP = document.querySelector('.results-screen__picks__computer__rock');
+                computerP = document.querySelector('.results-screen__picks__computer__rock');
                 break;
             default:
                 break;
@@ -46,12 +48,12 @@ function WinLoss({ userPick, setPicked, computerPick, result }) {
         switch(result) {
             case 'win':
                 setWin(true);
-                uP.classList.add('winner');
+                userP.classList.add('winner');
                 userPicksBackg.classList.remove('noshow');
                 break;
             case 'loss':
                 setLoss(true);
-                cP.classList.add('winner');
+                computerP.classList.add('winner');
                 computerPicksBackg.classList.remove('noshow');
                 break;
             case 'draw':
@@ -60,7 +62,7 @@ function WinLoss({ userPick, setPicked, computerPick, result }) {
             default:
                 break;
         }
-    }, [result, userPick, computerPick])
+    }, [result, userPick, computerPick]);
     
 
     return (
@@ -119,20 +121,14 @@ function WinLoss({ userPick, setPicked, computerPick, result }) {
                 </div>
             </div>
             <div className="results-screen__rapa">
-                {win &&
-                    <p className='results-screen__win-loss-draw'>YOU WIN</p>
-                }
+                {win && <p className='results-screen__win-loss-draw'>YOU WIN</p>}
                 
-                {loss &&
-                    <p className='results-screen__win-loss-draw'>YOU LOSE</p>
-                }
-                {draw &&
-                    <p className='results-screen__win-loss-draw'>TIE</p>
-                }
+                {loss && <p className='results-screen__win-loss-draw'>YOU LOSE</p>}
+                
+                {draw && <p className='results-screen__win-loss-draw'>TIE</p>}
+
                 <button className='results-screen__play-again-button' onClick={() => setPicked(false)}>PLAY AGAIN</button>
             </div>
         </div>
     )
 }
-
-export default WinLoss;

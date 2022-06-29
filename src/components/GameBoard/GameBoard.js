@@ -5,7 +5,8 @@ import scissors from '../../assets/icon-scissors.svg';
 import rock from '../../assets/icon-rock.svg';
 import './GameBoard.css';
 
-function GameBoard({ setPicked, setUserPick, setComputerPick, score, setScore, setResult }) {
+
+export default function GameBoard({ setPicked, setUserPick, setComputerPick, score, setScore, setResult }) {
 
   function shoot(userPick) {
     //  Randomly picks a number between 1 and 3
@@ -52,33 +53,26 @@ function GameBoard({ setPicked, setUserPick, setComputerPick, score, setScore, s
   }
 
   function updateScore(result) {
-    console.log('result: ', result);
     let x = score;
 
     switch(result) {
       case 'win':
-        x++;
-
         setResult('win');
-        setScore(x);
-        
+        setScore(x++);
         break;
       case 'loss':
         setResult('loss');
-        
         if(x > 0) {
           x--;
           setScore(x);
         }
-        
         break;
       default:
         setResult('draw');
-        
         break;
     }
 
-    localStorage.setItem('score', x);
+    localStorage.setItem('rps-score', x);
   }
 
 
@@ -108,5 +102,3 @@ function GameBoard({ setPicked, setUserPick, setComputerPick, score, setScore, s
     </section>
   )
 }
-
-export default GameBoard;

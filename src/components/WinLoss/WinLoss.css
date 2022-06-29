@@ -64,16 +64,12 @@
     box-shadow: inset 0px -5px hsl(348, 75%, 36%), 0 0 0 40px green, 0 0 0 60px blueviolet;
 }
 
-.winner {
-    
-}
-
 .noshow {
     display: none;
 }
 
 
-@media screen and (min-width: 375px) {
+@media screen and (min-width: 0px) {
     .results-screen__picks {
         justify-content: space-between;
     }
