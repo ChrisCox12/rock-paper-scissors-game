@@ -57,8 +57,9 @@ export default function GameBoard({ setPicked, setUserPick, setComputerPick, sco
 
     switch(result) {
       case 'win':
+        x++;
         setResult('win');
-        setScore(x++);
+        setScore(x);
         break;
       case 'loss':
         setResult('loss');
