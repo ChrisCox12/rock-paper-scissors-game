@@ -86,8 +86,8 @@ function App() {
       </div>
 
       <footer className='attribution' style={{ color: 'white', textAlign: 'center', marginTop: '1.5rem' }}>
-          Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank' rel='noreferrer'>Frontend Mentor</a>. 
-          Coded by <a href='https://chriscox12.github.io/' target='_blank' rel='noreferrer'>Christopher Cox</a>.
+          Challenge by <a href='https://www.frontendmentor.io?ref=challenge' target='_blank' rel='noreferrer' style={{ color: 'white' }}>Frontend Mentor</a>. 
+          Coded by <a href='https://chriscox12.github.io/' target='_blank' rel='noreferrer' style={{ color: 'white' }}>Christopher Cox</a>.
       </footer>
     </div>
   );
