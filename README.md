@@ -7,7 +7,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -27,7 +27,7 @@ Users should be able to:
 - **Bonus**: Play Rock, Paper, Scissors, Lizard, Spock against the computer _(optional)_
 
 
-### Screenshot
+### Screenshots
 
 - Game board
 ![Game board](./screenshots/gameboard.jpeg)
